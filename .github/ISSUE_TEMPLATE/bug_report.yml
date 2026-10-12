@@ -1,0 +1,49 @@
+name: 🐛 Bug report
+description: Report something that isn't working as expected
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! For security issues, please follow [SECURITY.md](../../SECURITY.md) instead.
+  - type: input
+    id: feature
+    attributes:
+      label: Affected feature
+      description: Which app feature or showcase is affected?
+      placeholder: e.g. AI PR summary, issue auto-labeling
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect to see?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Trigger ...
+        3. See error
+    validations:
+      required: true
+  - type: dropdown
+    id: ai-related
+    attributes:
+      label: Is the problem in AI output?
+      options:
+        - "No, it's a functional bug"
+        - "Yes, the output is incorrect or misleading"
+        - "Yes, the output is unsafe or leaked data"
+        - "Not sure"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Please redact tokens, keys and private data.
+      render: shell
