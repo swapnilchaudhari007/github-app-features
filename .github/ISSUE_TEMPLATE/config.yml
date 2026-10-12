@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/swapnilchaudhari007/github-app-features/security/advisories/new
+    about: Please report security issues privately.
+  - name: 📖 Contributing guide
+    url: https://github.com/swapnilchaudhari007/github-app-features/blob/main/CONTRIBUTING.md
+    about: Read this before opening an issue or PR.
