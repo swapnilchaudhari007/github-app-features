@@ -1,0 +1,46 @@
+name: ✨ Feature idea
+description: Suggest a new AI-powered GitHub app feature to showcase
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Developer pain point
+      description: What GitHub workflow problem does this solve?
+      placeholder: e.g. Reviewers spend too long working out large PRs
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposed feature
+      description: How would the AI-powered feature work?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: GitHub area
+      multiple: true
+      options:
+        - Issues
+        - Pull requests / code review
+        - Actions / CI
+        - Repository insights
+        - Security
+        - Docs / README
+        - Other
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: Permissions and safety
+      options:
+        - label: I've thought about which GitHub App permissions this needs
+        - label: I've thought about how untrusted repo content (prompt injection) is handled
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd like to help build this
